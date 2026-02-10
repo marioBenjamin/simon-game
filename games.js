@@ -8,13 +8,14 @@ var started = false;
 
 var level = 0;
 
-$("#level-title").on("click", function () {
+$(document).on("keypress touchstart", function() {
   if (!started) {
+    $("#level-title").text("Level " + level);
     nextSequence();
     started = true;
-    $("#level-title").text("Level " + level);
   }
 });
+
 
 
 $(".btn").click(function () {
