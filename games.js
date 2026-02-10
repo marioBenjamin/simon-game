@@ -8,11 +8,11 @@ var started = false;
 
 var level = 0;
 
-$(document).keypress(function () {
+$("#level-title").on("click", function () {
   if (!started) {
-    $("#level-title").text("level " + level);
-    nextsequence();
+    nextSequence();
     started = true;
+    $("#level-title").text("Level " + level);
   }
 });
 
